@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta name="theme-color" content="#E53935"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="description" content="Step2 Fitness Gym — Member Portal &amp; Staff Management"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>Step2 Fitness Gym</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body,#root{height:100%;width:100%}
+    body{background:#050505;color:#fff;font-family:'Segoe UI',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:4px;height:4px}
+    ::-webkit-scrollbar-track{background:#050505}
+    ::-webkit-scrollbar-thumb{background:#1e1e1e;border-radius:2px}
+    ::-webkit-scrollbar-thumb:hover{background:#E53935}
+    #boot{position:fixed;inset:0;background:#050505;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;z-index:9999;transition:opacity 0.3s}
+    .boot-ring{width:52px;height:52px;border:3px solid #111;border-top:3px solid #E53935;border-radius:50%;animation:spin .75s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+  <div id="boot">
+    <div style="width:76px;height:76px;border-radius:20px;background:#E53935;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px;color:#fff;box-shadow:0 0 48px rgba(229,57,53,0.5)">S2</div>
+    <div class="boot-ring"></div>
+    <p style="color:#333;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase">Step2 Fitness Gym</p>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const b = document.getElementById('boot');
+        if (b) { b.style.opacity = '0'; setTimeout(() => b.remove(), 320); }
+      }, 900);
+    });
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

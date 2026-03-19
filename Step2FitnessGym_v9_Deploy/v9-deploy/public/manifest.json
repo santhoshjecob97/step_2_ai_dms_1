@@ -1,0 +1,22 @@
+{
+  "name": "Step2 Fitness Gym",
+  "short_name": "Step2 Gym",
+  "description": "Member portal & staff management for Step2 Fitness Gym, Chennai",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#E53935",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/E53935/ffffff?text=S2",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/E53935/ffffff?text=S2",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

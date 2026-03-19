@@ -1,0 +1,13 @@
+{
+  "name": "step2-fitness-gym-v9",
+  "version": "9.0.0",
+  "private": true,
+  "description": "Step2 Fitness Gym — Ultimate AI Manager v9 (Member PWA Portal)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": { "react": "^18.3.1", "react-dom": "^18.3.1" },
+  "devDependencies": { "@vitejs/plugin-react": "^4.3.1", "vite": "^5.4.2" }
+}
